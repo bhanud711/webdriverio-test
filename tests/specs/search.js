@@ -9,7 +9,6 @@ describe('All Testing Website', ()=>{
         const button=$('idOfButton');
         firstName.addvalue('rama');
         button.click();
-
     })
 
     })

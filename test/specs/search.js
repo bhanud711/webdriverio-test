@@ -8,6 +8,7 @@ describe('All Testing Website', ()=>{
     */
     it('provide value to textfield', ()=>{
         const firstName=$('input[id=fname]');
+        firstName.saveScreenshot('./Images//pic1.png');
         firstName.addValue('Ramarao');    
     })
     /*@Autor : Ramarao
@@ -15,6 +16,7 @@ describe('All Testing Website', ()=>{
     */
     it('Click the button', ()=>{
         const button=$('button[id=idOfButton]');
+        button.saveScreenshot('./Images//pic2.png');
         button.click();
     })
 /*@Autor : Ramarao
@@ -23,6 +25,16 @@ describe('All Testing Website', ()=>{
     it('Click the male radio button', ()=>{
         const button=$('input[id=male]');
         button.click();
+    })
+
+    /*@Autor : Ramarao
+    Functionality: Handling drop down
+    */
+    it('Select DropDown Value', ()=>{
+        const selectBox=$('select[id=testingDropdown]');
+        console.log(selectBox.getText('option:checked')); 
+        selectBox.selectByVisibleText('Manual Testing');
+        console.log(selectBox.getText('option:checked'));
     })
 
     })
