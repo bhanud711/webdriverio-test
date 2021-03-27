@@ -8,16 +8,16 @@ describe('All Testing Website', ()=>{
     */
     it('provide value to textfield', ()=>{
         const firstName=$('input[id=fname]');
-        firstName.saveScreenshot('./Images//pic1.png');
-        firstName.addValue('Ramarao');    
+        firstName.addValue('Ramarao');
+        firstName.saveScreenshot('./Images//pic1.png');    
     })
     /*@Autor : Ramarao
     Functionality: user click the button
     */
     it('Click the button', ()=>{
         const button=$('button[id=idOfButton]');
-        button.saveScreenshot('./Images//pic2.png');
         button.click();
+        button.saveScreenshot('./Images//pic2.png');
     })
 /*@Autor : Ramarao
     Functionality: user click the male radio button
@@ -35,6 +35,15 @@ describe('All Testing Website', ()=>{
         console.log(selectBox.getText('option:checked')); 
         selectBox.selectByVisibleText('Manual Testing');
         console.log(selectBox.getText('option:checked'));
+    })
+    /*@Autor : Ramarao
+    Functionality: Handling drag and drop functionality
+    */
+
+    it('Handling Drag and drop', ()=>{
+        const source=$('img[id=sourceImage]');
+        const dest=$('div[id=targetDiv]');
+        source.dragAndDrop(dest);
     })
 
     })
