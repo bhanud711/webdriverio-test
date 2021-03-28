@@ -9,6 +9,7 @@ describe('All Testing Website', ()=>{
     it('provide value to textfield', ()=>{
         const firstName=$('input[id=fname]');
         firstName.addValue('Ramarao');
+        expect(firstName).toHaveValue('Ramarao');
         firstName.saveScreenshot('./Images//pic1.png');    
     })
     /*@Autor : Ramarao
@@ -16,6 +17,8 @@ describe('All Testing Website', ()=>{
     */
     it('Click the button', ()=>{
         const button=$('button[id=idOfButton]');
+        expect(button).toBeDisplayed();
+        expect(button).toBeVisible();
         button.click();
         button.saveScreenshot('./Images//pic2.png');
     })
@@ -23,8 +26,9 @@ describe('All Testing Website', ()=>{
     Functionality: user click the male radio button
     */
     it('Click the male radio button', ()=>{
-        const button=$('input[id=male]');
-        button.click();
+        const male=$('input[id=male]');
+        male.click();
+        expect(male).toBeChecked();
     })
 
     /*@Autor : Ramarao
