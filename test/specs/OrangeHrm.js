@@ -8,10 +8,7 @@ describe('webdriver.io.page', ()=>{
     it('Enter username', ()=>{
         const username = $('input[id=txtUsername]');
     
-        console.log(username.addValue('Admin'));
-        
-       
-         
+        console.log(username.addValue('Admin'));        
     })
 it('Enter password', ()=>{
     const password = $('input[id=txtPassword]');
