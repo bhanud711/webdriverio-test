@@ -1,13 +1,16 @@
 const { expect } = require("chai");
+describe('OrangeHRM', ()=>{
 
-
-describe('webdriver.io.page', ()=>{
+    before(() => {
+        browser.url('https://opensource-demo.orangehrmlive.com/index.php/dashboard');
+    });
     it('OrangeHRMWebpageValidation', ()=>{
-        browser.url('https://opensource-demo.orangehrmlive.com/index.php/dashboard');  
+        const url=browser.getUrl();
+        expect(url).to.be.include('https://opensource-demo.orangehrmlive.com/index.php/dashboard');  
     })
+
     it('Enter username', ()=>{
         const username = $('input[id=txtUsername]');
-    
         console.log(username.addValue('Admin'));        
     })
 it('Enter password', ()=>{
